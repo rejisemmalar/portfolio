@@ -1,0 +1,173 @@
+/* ===== Section ===== */
+.services-section {
+    min-height: 100vh;
+    padding: 100px 8%;
+    background: radial-gradient(circle at top, #9f1239 0%, #020617 70%);
+    color: #fff;
+}
+
+/* ===== Title ===== */
+.services-title {
+    color: #e14b6e;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.services-subtitle {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 60px;
+}
+
+/* ===== Grid ===== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+}
+
+/* ===== Card ===== */
+.service-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+    border-radius: 22px;
+    padding: 38px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glow */
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top,
+            rgba(255, 0, 90, 0.35),
+            transparent 65%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px rgba(255, 0, 90, 0.45);
+}
+
+/* ===== Icon ===== */
+.service-icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #ff4d8d;
+    transition: transform 0.35s ease;
+}
+
+/* Soft glowing circle behind icon */
+.service-icon::after {
+    content: "";
+    position: absolute;
+    inset: -18px;
+    background: radial-gradient(circle,
+            rgba(255, 0, 90, 0.25),
+            transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.6;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Pulse animation */
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(255, 0, 90, 0.6);
+    }
+
+    70% {
+        transform: scale(1.12);
+        border-radius: 50%;
+        box-shadow: 0 0 0 18px rgba(255, 0, 90, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(255, 0, 90, 0);
+    }
+}
+
+
+.service-card:hover .service-icon {
+    animation: iconPulse 1.2s ease-out infinite;
+}
+
+.service-card:hover .service-icon::after {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+/* ===== Title ===== */
+.service-card h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #7876e2;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* ===== Description ===== */
+.service-card p {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-title {
+        font-size: 30px;
+    }
+}
