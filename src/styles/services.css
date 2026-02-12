@@ -153,21 +153,56 @@
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #ffffff;
+
 }
 
-/* ===== Responsive ===== */
+/* ==========Responsive============ */
+/*  desktop  */
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 60px 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/*  Tablet  */
 @media (max-width: 900px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .services-section {
+    padding: 50px 32px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width: 520px) {
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+/*  Mobile  */
+@media (max-width: 730px) {
+  .services-section {
+    padding: 36px 24px;
+  }
 
-    .services-title {
-        font-size: 30px;
-    }
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 0; /* grid shouldn't add extra padding */
+  }
+
+  .services-title {
+    font-size: 32px;
+  }
+}
+
+/*  Small Mobile  */
+@media (max-width: 520px) {
+  .services-section {
+    padding: 24px 16px;
+  }
+
+  .services-title {
+    font-size: 26px;
+  }
 }

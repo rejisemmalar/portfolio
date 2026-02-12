@@ -1,105 +1,111 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 .splash-container {
-    min-height: 100vh;
-    /* padding-top: 120px;  */
-    background: radial-gradient(circle at top, #9f1239, #020617);
-    color: #e5e7eb;
+  min-height: 100vh;
+  /* padding-top: 120px;  */
+  background: radial-gradient(circle at top, #9f1239, #020617);
+  color: #e5e7eb;
 }
 
 .floating-nav {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
-    padding: 10px;
-    border-radius: 999px;
-    width: 40%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 999px;
+  width: max-content;
+   max-width: calc(100% - 24px);
+   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 40px rgba(244, 63, 94, 0.25),
+    0 10px 40px rgba(0, 0, 0, 0.5);
 
-    box-shadow:
-        0 0 40px rgba(244, 63, 94, 0.25),
-        0 10px 40px rgba(0, 0, 0, 0.5);
-
-    z-index: 1000;
+  z-index: 1000;
 }
 
 /* Nav Item*/
 .nav-item {
-    font-family: 'Times New Roman', Times, serif;
-    position: relative;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 
-    padding: 8px 14px;
-    border: none;
-    border-radius: 999px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 999px;
 
-    color: #e5e7eb;
-    font-size: 1rem;
-    text-decoration: none;
-    cursor: pointer;
+  color: #e5e7eb;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
 /* Icon */
 .nav-item i {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* HOver */
 .nav-item:hover {
-    background: linear-gradient(145deg,
-            rgba(54, 106, 210, 0.25),
-            rgba(140, 2, 25, 0.15));
+  background: linear-gradient(145deg,
+      rgba(54, 106, 210, 0.25),
+      rgba(140, 2, 25, 0.15));
 
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 
-    box-shadow:
-        0 8px 20px rgba(220, 38, 38, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 8px 20px rgba(220, 38, 38, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 /* ACTIVE  */
 .nav-item.active {
-    background: linear-gradient(135deg,
-            rgba(244, 63, 94, 0.9),
-            rgba(251, 113, 133, 0.9));
-    color: white;
+  background: linear-gradient(135deg,
+      rgba(244, 63, 94, 0.9),
+      rgba(251, 113, 133, 0.9));
+  color: white;
 
-    box-shadow:
-        0 0 16px rgba(244, 63, 94, 0.9),
-        0 0 32px rgba(244, 63, 94, 0.6);
+  box-shadow:
+    0 0 16px rgba(244, 63, 94, 0.9),
+    0 0 32px rgba(244, 63, 94, 0.6);
 }
 
 .nav-item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    opacity: 0;
-    box-shadow: 0 0 12px rgba(244, 63, 94, 0.6);
-    transition: opacity 0.25s ease;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.6);
+  transition: opacity 0.25s ease;
 }
 
 .nav-item:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .hero-section {
- 
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,6 +126,7 @@
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -168,7 +175,7 @@
   }
 
   .nav-item span {
-    display: none; 
+    display: none;
   }
 
   .nav-item {
@@ -178,7 +185,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 100px; 
+    padding-top: 100px;
   }
 
   .hero-container {

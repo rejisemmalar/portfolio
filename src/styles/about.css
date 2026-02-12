@@ -232,17 +232,91 @@
 }
 
 /* ===== Responsive ===== */
+/* laptop */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    padding: 0 24px;
+  }
+
+  .about-left h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/*tab */
 @media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .about-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-points {
+    max-width: 620px;
+    margin: 16px auto 0;
+  }
+
+  .about-points li {
+    justify-content: center;
+    text-align: left;  
+  }
+
   .skills-card {
-    max-width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
   .skills-logos {
+    justify-content: center;
+  }
+}
+
+/* mobile*/
+@media (max-width: 520px) {
+  .about-container {
+    padding: 0 16px;
+  }
+
+  .about-left h1 {
+    font-size: 1.9rem;
+  }
+
+  .about-points li {
+    font-size: 0.9rem;
+    padding: 6px 8px;
     gap: 8px;
   }
 
+  .skills-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
   .skill-item img {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
   }
 }
+
+/* small mobile */
+@media (max-width: 400px) {
+  .about-left h1 {
+    font-size: 1.7rem;
+  }
+
+  .about-points li {
+    font-size: 0.85rem;
+  }
+
+  .skills-card {
+    padding: 16px;
+  }
+}
+
