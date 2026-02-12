@@ -188,7 +188,7 @@
 
   .services-grid {
     grid-template-columns: 1fr;
-    padding: 0; /* grid shouldn't add extra padding */
+    padding: 0; 
   }
 
   .services-title {
