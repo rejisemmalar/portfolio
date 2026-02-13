@@ -248,3 +248,19 @@ body,
     padding: 6px 12px;
   }
 }
+
+/* very sm */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-desc {
+    font-size: 0.85rem;
+  }
+
+  .enter-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}
