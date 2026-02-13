@@ -8,7 +8,7 @@ export default function SplashScreen() {
     <div className="splash-container">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-md-10 col-lg-8 col-xl-6">
+          <div className="col-12 col-md-10 col-lg-8 col-xl-6 ">
             <div className="glass splash-left text-center">
               <h1 className="hero-title">
                 Welcome to <br />
