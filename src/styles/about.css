@@ -38,8 +38,6 @@
   align-items: flex-start;
 }
 
-
-
 /* points */
 .about-points {
   list-style: none;
@@ -113,7 +111,7 @@
   color: #fda4af;
 }
 
- .about-icon {
+.about-icon {
   transform: rotate(15deg) scale(1.15);
   filter: drop-shadow(0 0 8px rgba(251, 113, 133, 0.7));
 }
@@ -124,11 +122,9 @@
   position: relative;
   border-radius: 18px;
   padding: 22px;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.08),
-    rgba(255, 255, 255, 0.02)
-  );
+  background: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.02));
   backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow:
@@ -143,12 +139,10 @@
   position: absolute;
   inset: -1px;
   border-radius: 18px;
-  background: linear-gradient(
-    120deg,
-    rgba(244, 63, 94, 0.5),
-    rgba(59, 130, 246, 0.35),
-    rgba(244, 63, 94, 0.5)
-  );
+  background: linear-gradient(120deg,
+      rgba(244, 63, 94, 0.5),
+      rgba(59, 130, 246, 0.35),
+      rgba(244, 63, 94, 0.5));
   opacity: 0.18;
   filter: blur(14px);
   z-index: -1;
@@ -259,17 +253,18 @@
   .about-points {
     max-width: 620px;
     margin: 16px auto 0;
-        padding: 0 16px 16px 0;
+    padding: 0 16px 16px 0;
 
   }
 
   .about-points li {
     justify-content: center;
-    text-align: left;  
+    text-align: left;
   }
-  .about-right{
+
+  .about-right {
     padding: 0 30px 20px 0;
-    }
+  }
 
 
   .skills-card {
@@ -285,23 +280,25 @@
 /* mobile*/
 @media (max-width: 520px) {
   .about-container {
-    padding: 0 16px 16px 0;
+    padding: 16px 16px 16px 16px;
   }
 
   .about-left h1 {
     font-size: 1.9rem;
   }
-.about-points{
-      padding: 0 16px 16px 0;
 
-}
+  .about-points {
+    padding: 0 16px 16px 0;
+
+  }
+
   .about-points li {
     font-size: 0.9rem;
-    padding: 0 16px 16px 0;
+    padding: 16px 16px 16px 10px;
     gap: 8px;
   }
 
-  
+
   .skills-card {
     padding: 18px;
     border-radius: 16px;
@@ -316,19 +313,18 @@
 
 /* small mobile */
 @media (max-width: 400px) {
+
   .about-left h1 {
     font-size: 1.7rem;
   }
 
   .about-points li {
     font-size: 0.85rem;
-        padding: 0 16px 16px 0;
+    padding: 0 16px 16px 0;
 
   }
-  
 
   .skills-card {
     padding: 16px;
   }
 }
-

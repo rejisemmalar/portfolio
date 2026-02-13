@@ -293,7 +293,7 @@ html, body {
 }
 
 
-/* RESPONSIVE */
+/* ==========Responsive========================== */
 @media (max-width: 900px) {
     .about-container {
         grid-template-columns: 1fr;
@@ -308,9 +308,7 @@ html, body {
         justify-content: center;
     }
 }
-/* =========================
-   LARGE LAPTOPS (≤ 1200px)
-========================= */
+
 @media (max-width: 1200px) {
   .home-container {
     max-width: 1000px;
@@ -318,11 +316,8 @@ html, body {
   }
 }
 
-/* =========================
-   LAPTOPS (≤ 1024px)
-========================= */
-@media (max-width: 1024px) {
-  
+
+@media (max-width: 1024px) {  
 
   .home-container {
     grid-template-columns: 1.5fr 1fr;
@@ -339,7 +334,6 @@ html, body {
   }
 }
 
-/* ==========Responsive========================== */
 @media (max-width: 768px) { 
 
 
@@ -403,6 +397,9 @@ html, body {
 
 /* mobile */
 @media (max-width: 520px) {
+  .home-container{
+    margin-top: -100px;
+  }
   .home-left h1 {
     font-size: 1.9rem;
   }
