@@ -9,7 +9,7 @@ import moodbased from "../assets/images/mood-based.png";
 const projects = [
   {
     id: 1,
-    title: "Timeline visulaizer",
+    title: "Timeline Visualizer",
     description:
       "Interactive timeline to visually track events, milestones, and progress over time.",
     image: timeline,

@@ -30,7 +30,7 @@ export default function AboutView() {
               </li>
               <li>
                 <i className="bi bi-stars about-icon"></i>
-                Worked at <b>LAN Innovations</b> developing responsive UIs with
+                Worked at LAN Innovations developing responsive UIs with
                 React.js and Bootstrap.
               </li>
               <li>

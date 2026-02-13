@@ -9,7 +9,6 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* LEFT | RIGHT */
   gap: 60px;
   align-items: flex-start;
   width: 100%;
@@ -260,12 +259,18 @@
   .about-points {
     max-width: 620px;
     margin: 16px auto 0;
+        padding: 0 16px 16px 0;
+
   }
 
   .about-points li {
     justify-content: center;
     text-align: left;  
   }
+  .about-right{
+    padding: 0 30px 20px 0;
+    }
+
 
   .skills-card {
     max-width: 520px;
@@ -280,19 +285,23 @@
 /* mobile*/
 @media (max-width: 520px) {
   .about-container {
-    padding: 0 16px;
+    padding: 0 16px 16px 0;
   }
 
   .about-left h1 {
     font-size: 1.9rem;
   }
+.about-points{
+      padding: 0 16px 16px 0;
 
+}
   .about-points li {
     font-size: 0.9rem;
-    padding: 6px 8px;
+    padding: 0 16px 16px 0;
     gap: 8px;
   }
 
+  
   .skills-card {
     padding: 18px;
     border-radius: 16px;
@@ -313,7 +322,10 @@
 
   .about-points li {
     font-size: 0.85rem;
+        padding: 0 16px 16px 0;
+
   }
+  
 
   .skills-card {
     padding: 16px;
